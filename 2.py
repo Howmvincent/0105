@@ -41,13 +41,25 @@ class BoardingPass:
     def print_boarding_time(self):
         print(f"預計登機時間為 {self.boarding_time}")
 
-# 創建行李和登機證實例並顯示資訊及呼叫副函式
+# 創建行李和登機證實例並顯示資訊
 luggage = Luggage("12345", 25, "Airport A", "Airport B", "Alice")
-boarding_pass = BoardingPass("Alice", "ABCDE12345", "2024-01-05 08:00", "Gate 10", "24A", 2, ["12345", "67890"])
+passenger1_luggage = Luggage("12345", 20, "Airport A", "Airport B", "Alice")
+passenger2_luggage = Luggage("67890", 18, "Airport C", "Airport D", "Bob")
+passenger3_luggage = Luggage("54321", 22, "Airport E", "Airport F", "Charlie")
 
-# 顯示行李資訊
-luggage.display_info()
-# 顯示登機證資訊
-boarding_pass.display_info()
- # 印出預計登機時間
-boarding_pass.print_boarding_time()
+passenger1_boarding_pass = BoardingPass("Alice", "ABCDE12345", "2024-01-05 08:00", "Gate 10", "24A", 1, ["12345"])
+passenger2_boarding_pass = BoardingPass("Bob", "FGHIJ67890", "2024-01-06 09:00", "Gate 20", "15B", 1, ["67890"])
+passenger3_boarding_pass = BoardingPass("Charlie", "KLMNO54321", "2024-01-07 10:00", "Gate 30", "30C", 1, ["54321"])
+# 呼叫副函式顯示資訊
+passenger1_luggage.display_info()
+
+passenger1_boarding_pass.display_info()
+passenger1_boarding_pass.print_boarding_time()
+
+passenger2_luggage.display_info()
+passenger2_boarding_pass.display_info()
+passenger2_boarding_pass.print_boarding_time()
+
+passenger3_luggage.display_info()
+passenger3_boarding_pass.display_info()
+passenger3_boarding_pass.print_boarding_time()
