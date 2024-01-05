@@ -1,9 +1,5 @@
 class Car:
-    # 初始化車名，品牌，價格 屬性
-    def __init__(self):
-        self.car_name = ""
-        self.brand = ""
-        self.price = 0
+   
 
     def set_car_details(self, name, brand, price):
         self.name = name
