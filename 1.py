@@ -1,11 +1,11 @@
 class Car:
-    # 初始化車名，品牌，價格 屬性
+    # 初始化車名，品牌，價格的屬性
     def set_car_details(self, name, brand, price):
         self.name = name
         self.brand = brand
         self.price = price
 
- # 顯示汽車資訊
+ # 顯示汽車資訊的格式
     def display_info(self):
         print(f"車名：{self.name}，品牌：{self.brand}，價格：${self.price}")
 
